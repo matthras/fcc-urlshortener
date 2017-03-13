@@ -1,0 +1,17 @@
+{
+  "name": "fcc-urlshortener",
+  "version": "0.0.0",
+  "description": "FreeCodeCamp's URL Shortener Project",
+  "main": "server.js",
+  "author": "Matthew Mack <mm@matthewmack.com.au>",
+  "dependencies": {
+    "async": "~0.2.8",
+    "express": "^3.2.6",
+    "mongodb": "^2.2.24"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {},
+  "license": "ISC"
+}
