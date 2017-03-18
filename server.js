@@ -60,4 +60,8 @@ app.get(/\/(\d+)/, function(req, res) {
     }
 )})
 
+app.get('/', function(req,res) {
+    res.sendFile('index.html', {root: __dirname })
+})
+
 app.listen(8080, console.log('Listening on port 8080'))
