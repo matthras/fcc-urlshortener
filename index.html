@@ -1,0 +1,22 @@
+<head>
+</head>
+<body>
+    <h1>FreeCodeCamp URL Shortener</h1>
+    <h3>How does this work?</h3>
+    <ul>
+        <li>Go to URL/new/[insert URL here] to get your shortened URL.</li>
+        <li>Go to URL/[insert number here] (assuming you know it already) to be redirected to its registered/saved website</li>
+    </ul>
+    Or if you're lazy, you can paste your URL here below to get a shortened URL:
+    <input type="text" id="urlBox"> <button onclick="gimmeURL()">Gimme a shorter URL!</button>
+<script>
+    const gimmeURL = () => {
+        var urlText = document.getElementById('urlBox').value;
+        if(urlText.length === 0){
+            alert("You haven't entered anything in the URL field!")
+        } else {
+            window.location = 'http://localhost:8080/new/' + urlText;
+        }
+    }
+</script>
+</body>
