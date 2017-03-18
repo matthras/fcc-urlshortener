@@ -42,8 +42,8 @@ app.get(/new\/(.+)/, function(req,res) {
     }
 })
 
-app.get('/:id', function(req, res) {
-    var id = req.params.id;
+app.get(/\/(\d+)/, function(req, res) {
+    var id = req.params[0];
     // Look up id in database
     mongo.connect('mongodb://localhost:27017/fcc', (err,db) => {
         db.collection('urlshortener').find( { _id: parseInt(id) } ).toArray( (err,data) => {
